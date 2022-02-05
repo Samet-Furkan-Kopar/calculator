@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: consolas;
+    
+   
+}
+@import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300;700&family=Source+Serif+Pro:wght@300&display=swap');
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #333;
+}
+.container{
+    position: relative;
+    min-width: 300px;
+    min-height: 400px;
+    background: #333;
+    border-radius: 20px;
+    padding: 40px 30px 30px ;
+    box-shadow: 25px 25px 75px rgba(0, 0, 0, 0.25) ,
+    10px 10px 70px rgba(0, 0, 0, 0.25) ,
+    inset -5px -5px 15px rgba(0, 0, 0, 0.25) , /* baya önemli*/
+    inset 5px 5px 15px rgba(0, 0, 0, 0.25) ;
+}
+.calculator{
+position: relative;
+display: grid;
+}
+.value{
+position: relative;
+grid-column: span 4;
+height :100px;
+left: 3px;
+width: calc(100% - 15px);
+border: none;
+outline: none;
+background:#a7af7c;
+margin-bottom: 10px;
+border-radius: 10px;
+box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.75);
+text-align: right;
+padding: 10px;
+font-size: 2em;
+}
+.calculator span{
+    position: relative;
+    display: grid;
+    width: 80px;
+    height: 80px;
+    margin: 5px;
+    place-items: center;
+    background: linear-gradient(180deg,#2f2f2f,#3f3f3f);/*kutucuk şekline getirdi*/
+    box-shadow: inset -8px 0 8px rgba(0, 0, 0, 0.15),
+    inset  0 -8px 8px rgba(0, 0, 0, 0.25),
+    0 0 0 2px rgba(0, 0, 0, 0.75),
+    10px 20px 25px rgba(0, 0, 0, 0.4);
+    color: #fff;
+    user-select: none;
+    cursor: pointer;
+    font-weight: 400;
+    border-radius: 10px;
+}
+.calculator span::before{
+content: ' ';
+position: absolute;
+top: 4px;
+left: 9px;
+bottom: 10px;
+right: 6px;
+border-radius: 10px;
+background: linear-gradient(90deg,#2d2d2d,#4d4d4d);
+box-shadow: -5px -5px 15px rgba(0, 0, 0, 0.1),
+ 15px 15px 10px rgba(0, 0, 0, 0.15);
+ border-left: 1px solid #0004;
+ border-bottom: 1px solid #0004;
+ border-top: 1px solid #0004;
+}
+.calculator span:active{
+filter: brightness(1.6);
+}
+.calculator span i{
+position: relative;
+font-style: normal;
+font-size: 1.5rem;
+text-transform: uppercase;
+}
+
+.calculator .clear{
+grid-column: span 2;/*2 sütunluk yer açtık*/
+width: 11.2rem;
+background: #f00;
+}
+.calculator .clear::before{
+    background: linear-gradient(90deg,#d20000,#ffffff5c);
+    border-left: 1px solid #fff4;
+    border-bottom: 1px solid #fff4;
+    border-top: 1px solid #fff4;
+}
+.calculator .plus{
+    grid-row: span 2;/*2 satırlık yer açtık ve büyüttük*/
+    height: 10.6rem;
+}
+.calculator .equal{
+    background: mediumturquoise;
+}
+.calculator .equal::before{
+    background: linear-gradient(90deg,#41bbc4,#ffffff5c);
+    border-left: 1px solid mediumturquoise;
+    border-bottom: 1px solid rgb(37, 243, 236)3);
+    border-top: 1px solid rgb(27, 238, 231);
+}
